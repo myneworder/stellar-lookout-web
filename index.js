@@ -35,6 +35,11 @@ server.register(require('vision'), (err) => {
     path: '/',
     handler: function (request, reply) {
       reply.view('index');
+    },config: {
+      state: {
+        parse: false, // parse and store in request.state
+        failAction: 'ignore' // may also be 'ignore' or 'log'
+      }
     }
   });
 
@@ -57,11 +62,21 @@ server.register(require('vision'), (err) => {
         return;
       })
 
+    },config: {
+      state: {
+        parse: false, // parse and store in request.state
+        failAction: 'ignore' // may also be 'ignore' or 'log'
+      }
     }
   });
 
   server.route({
-    method: 'POST',
+    method: 'POST',config: {
+      state: {
+        parse: false, // parse and store in request.state
+        failAction: 'ignore' // may also be 'ignore' or 'log'
+      }
+    },
     path: '/{number}',
     handler: function (request, reply) {
         // debugger;
