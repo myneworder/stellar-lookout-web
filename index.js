@@ -12,7 +12,7 @@ const moment = require('moment');
 
 server.connection({
     port: Number(process.argv[2] || 8080),
-    host: 'localhost'
+    host: '0.0.0.0'
 });
 
 server.register(require('vision'), (err) => {
