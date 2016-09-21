@@ -1,0 +1,17 @@
+
+    <p class="introText">
+Here, you can manage your subscriptions. Each line represents an account that you are subscribed to. When a transaction involving your account occurs, you will receive a text message with a summary of what happened.
+    </p>
+
+One account ID per line:
+<form method="post">
+  <input type="hidden" name="setSubscriptions" value="Set subscriptions">
+  <div>
+  <textarea rows="10" name="subscriptions" placeholder="Example: GCNBSRRFR5DJYK5MRV5R4NTA65RT24RJFLVJ6TUKVJJG6UQISXW4L2H2" class="subscriptionBox">{{subs}}</textarea>
+  </div><div>
+  <input type="submit" value="Update subscriptions" class="button"></div>
+</form>
+
+
+
+Your lookout account expires {{expiration}}. After that date, you can reactivate your Stellar Lookout account and resubscribe to Stellar accounts. The expiration is for privacy of users and ensuring a high quality service.

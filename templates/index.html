@@ -1,0 +1,24 @@
+<p>Stellar Lookout is a service that lets you get text message notifications regarding transactions that happen on your Stellar account.
+</p>
+
+<form id="frontSignup">
+  Sign up or log in using your phone number<br />
+  <input type="text" name="number" id="frontSignupNumber" placeholder="Example: +234 1 5551234"><br>
+<div><small>Note: use the international phone number format including country code</small></div>
+    <div><small>Standard data and text messaging rates may apply.</small></div>
+  <input type="submit" value="Submit"  class="button">
+</form>
+
+
+<script>
+$(function() {
+  $('#frontSignup').submit(function(e) {
+    e.preventDefault();
+    var normalized = twilio.normalizeId($('#frontSignupNumber').val());
+    if (normalized == false) {
+      return;
+    }
+    window.location.href = '/' + normalized;
+  })
+});
+</script>

@@ -1,0 +1,29 @@
+{
+  "name": "stellar-lookout-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irisli/stellar-lookout-web.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/irisli/stellar-lookout-web/issues"
+  },
+  "homepage": "https://github.com/irisli/stellar-lookout-web#readme",
+  "dependencies": {
+    "handlebars": "^4.0.5",
+    "hapi": "^15.0.3",
+    "hoek": "^4.1.0",
+    "lodash": "^4.16.1",
+    "moment": "^2.15.1",
+    "normalize-newline": "^3.0.0",
+    "stellar-lookout": "git@github.com:irisli/stellar-lookout.git",
+    "vision": "^4.1.0"
+  }
+}

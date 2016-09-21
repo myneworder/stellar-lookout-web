@@ -1,0 +1,112 @@
+<html>
+<!-- Im gonna fix up this web app code. it's a total mess right now. -->
+  <title>Stellar Lookout</title>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+  <script>
+  var twilio = {};
+  twilio.normalizeId = function(inputId) {
+    let normalized = String(inputId).replace(/[^0-9]/g, '');
+    if (normalized.length < 7) {
+      alert('Please enter a valid phone number')
+      return false;
+    }
+    return normalized;
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <body>
+  <div class="container">
+    <div class="siteHeader">
+      <a href="/" class="headerLink">Stellar Lookout <span class="beta">beta</span></a>
+
+      <div class="number">
+        {{{number}}}
+      </div>
+    </div>
+
+    {{{content}}}
+
+
+    <br />
+
+    <div class="footer"><a href="https://www.stellar.org/">About Stellar</a> | <a href="https://github.com/irisli/stellar-lookout">GitHub</a> | <a href="https://iris.li/contact/">Contact the creator</a></div>
+    </div>
+ </body>
+ <style>
+body, html {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+body {
+  background: #FFFAFA;
+  color: #444;
+    font-size: 18px;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-family: 'Open Sans', sans-serif;
+}
+.container {
+  max-width: 800px;
+}
+.container {margin: 0 auto;}
+.siteHeader {
+    font-size: 21px;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    border-bottom: 1px dashed rgba(0,0,0,0.2);
+    margin-bottom: 1.5em;
+}
+.siteHeader a.headerLink {
+    color:currentColor;
+    text-decoration:none;
+    opacity:0.8;
+}
+.siteHeader a.headerLink:hover {
+  opacity:1;
+}
+
+.beta {
+    opacity: 0.5;
+}
+
+.number {
+    float: right;
+}
+
+.subscriptionBox {
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.3);
+}
+
+.button {
+    font-size: 21px;
+    margin-top: 0.5em;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    padding: 8px 12px;
+}
+
+.button:hover {
+    background: #fafafa;
+    cursor: pointer;
+}
+
+#frontSignupNumber {
+    font-size: 32px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.3);
+}
+.footer a{
+  color: currentColor;
+  text-decoration: underline;
+
+}
+ </style>
+</html>
