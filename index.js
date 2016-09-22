@@ -45,6 +45,14 @@ server.register(require('vision'), (err) => {
 
   server.route({
     method: 'GET',
+    path: '/favicon.ico',
+    handler: function (request, reply) {
+      reply('favicon');
+    },
+  });
+
+  server.route({
+    method: 'GET',
     path: '/{number}',
     handler: function (request, reply) {
       lookout.getInfo({
