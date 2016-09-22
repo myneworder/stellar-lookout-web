@@ -127,7 +127,8 @@ server.register(require('vision'), (err) => {
 });
 
 function manageHandler(accountInfo, reply) {
-  var subs = _.map(accountInfo.accounts, 'accountid').join('\n');
+  var subs = _.map(accountInfo.accounts).join('\n');
+
   reply.view('manage', {
     accountInfo,
     subs,
